@@ -19,3 +19,21 @@ const myFunction = function(){
 myFunction()
 
 // typeof null ---> object
+
+
+//------------------------------------------------------
+//MEMORY ALLOCATION
+
+// STACK (Primtiive)  , HEAP (Non primitive)
+// ** Stack will cause changes in the copy
+// Heap will cause changes in the original var
+
+
+//so example of stack
+let youtubeName = "imagelicious"
+let anotherName = youtubeName
+anotherName = "dailyvlog"
+
+console.log(youtubeName); //imagelicious
+// which means the actual var isnt changed actually a copy of this var is passed to the another var
+
