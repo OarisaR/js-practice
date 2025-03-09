@@ -8,19 +8,19 @@
 //Calling a function immediately after it is declared ---> (function)()
 
 (function hello() {
-    console.log(`Hello World`);
+    console.log(`Hello World`)
 
 }());
 
 (function hello1() {
-    console.log(`Hello World`);
+    console.log(`Hello World`)
 
 }());   
 
 // shows error because the first function do not know when to stop!  so we apply a semicolon to indicate the end!
 
 ( (name) => {
-    console.log(`Hello ${name}`);
+    console.log(`Hello ${name}`)
 
 }) ("oarisa")  
 
