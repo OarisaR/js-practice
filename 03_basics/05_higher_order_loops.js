@@ -111,7 +111,12 @@ const nums = [1, 2, 3, 4, 5, 6, 7]
 
 //const newNums = nums.map( (num) => num * 10 )
 // Maps return the value by doing any kind of op or simply while filter plays the game of a condition true/false
+// it has the arg sntax like - val,idx !
+const colors = ['red', 'green', 'blue'];
 
+const colorList = colors.map((color, index) => {
+  return <div key={index}>{color}</div>;
+})
 //CHAINING!
 // const newNums = nums
 //     .map((num) => num * 10)
