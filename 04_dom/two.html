@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE AND DOM</title>
+    <style>
+        body{
+            background-color : black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent.children); // returns HTML collection
+    console.log(parent.children[1]); // returns tuesday
+
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML)
+        
+    }
+    parent.firstElementChild // this will return the first element
+    
+    
+    const day1 = document.querySelector('.day') // tue
+    console.log(day1.parentElement); // parent div
+    console.log(day1.nextElementSibling); // wed
+    
+    console.log("Nodes: ", parent.childNodes); // returns node list
+    // this not only returns those li but also returns all possible elements like even a break or a line break or a text or a div  or even a COMMENT
+    
+
+    
+    
+    </script>
+</html>
