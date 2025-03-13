@@ -16,7 +16,7 @@ div.setAttribute("title","generatedTitle")
 div.style.backgroundColor = "red"
 div.innerText = "chai"
 // the div is present only in the memory it is not visible yet we need to append it to the doc
-document.body.appendChild(div)
+document.body.appendChild(div) //appended to the parent!
 
 // we can directly create a text node
 const n = document.createTextNode("coffee")
