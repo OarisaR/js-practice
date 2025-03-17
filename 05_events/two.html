@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(34, 30, 30);
+            color: white;
+        }
+
+        button {
+            border-radius: 10px;
+            margin-top: 12px;
+            font-size: 34px;
+            padding: 15px;
+            color: white;
+            background-color: rgb(72, 72, 142);
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coffee and Chill</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //This bascially requests a time to execute a task. It has two parameters - 
+    // a callback function and a time
+
+    const sayMe = function () {
+        console.log("Oarisa");
+    }
+
+    const changeText = function () { document.querySelector('h1').innerHTML = "best drink" }
+    const changeMe = setTimeout(changeText, 2000)
+
+    // now again we need something that clears the timeout we use clearTiemout but yet we need to do this upon an action such that 
+    // //if we click the button before 2s it wont change the inner html
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearTimeout(changeMe)
+    })
+
+
+
+</script>
+
+</html>

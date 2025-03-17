@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(34, 30, 30);
+            color: white;
+        }
+
+        button {
+            border-radius: 10px;
+            margin-top: 12px;
+            font-size: 34px;
+            padding: 15px;
+            color: white;
+            background-color: rgb(72, 72, 142);
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coffee and Javascript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+//This is similar to setTimeout but it has a 3rd parameter
+const time = function(str) {
+    console.log(str, new Date().toLocaleString());
+};
+
+// const intervalID = setInterval(time,1000,"HI BRO")
+
+// clearInterval(intervalID)
+
+//NOW LET US DO A WORK TO START PRINTING HI BRO AFTER WE START BUTTON THEN STOP BY STOP BUTTON!
+
+
+let intervalTrack //to pass in clearInterval
+document.getElementById('start').addEventListener('click',()=>{
+    intervalTrack = setInterval(time,1000,"Hi buddy")
+})
+
+document.getElementById('stop').addEventListener('click',()=>{
+   clearInterval(intervalTrack)
+})
+
+
+
+
+</script>
+
+</html>
