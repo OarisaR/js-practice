@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+    <!---In earlier days XML would be used to fetch data from an API. Recently the fetch() has emerged
+
+Below the serial number represent the code of the respective states
+-->
+
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete.
+
+
+
+
+    <div class="image"></div>
+    <div class = "follower">Followers : <span></span></div>
+</body>
+
+<script>
+
+    const request = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', request);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 ) {  // Ensure request was successful
+            const data = JSON.parse(this.responseText);
+            const photoUrl = data.avatar_url;
+
+            console.log(data.followers);
+            console.log(data);
+
+            // Create an image element
+            const imgElement = document.createElement('img');
+            imgElement.src = photoUrl;
+            imgElement.alt = "GitHub Avatar";
+            imgElement.style.width = "150px"; // Optional styling
+
+            // Append to the container
+            const imageContainer = document.querySelector('.image');
+            imageContainer.appendChild(imgElement);
+
+            const follower = document.querySelector('span')
+            follower.innerHTML = data.followers;
+        }
+    };
+
+    xhr.send();
+
+
+</script>
+
+</html>
