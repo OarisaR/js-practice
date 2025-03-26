@@ -41,7 +41,7 @@ for (const key in arr1) {
     console.log(arr1[key]);
 
 }
-// SHORTLY -- USE FOR OF FOR OBJECT AND FOR IN FOR ARRAY
+// SHORTLY -- USE FOR OF FOR ARRAY AND FOR IN FOR OBJECT
 
 const color = ["lauve", "lav", "pink", "red", "yellow"]
 
